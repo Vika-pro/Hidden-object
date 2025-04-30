@@ -56,11 +56,13 @@
 <body>
 <div class="box" style="background-image: url('1.jpg'); background-size: 100% 100%; background-repeat: no-repeat; height: 950px;">
 	
-	<div style="height: 150px; width: 200px; background-color: gray; border-radius: 20px; position: absolute; top: 0px;">
+	<div style="height: 300px; width: 200px; background-color: gray; border-radius: 20px; position: absolute; top: 0px;">
 		<h1 class="txt" style="text-align: center;">Надо найти:</h1>
 		<li class="txt1">призрак</li>
 		<li class="txt2" style="margin-top: 5px;">горшок с золотом</li>
 		<li class="txt3" style="margin-top: 5px;">крыса</li>
+		<h1 style="margin-top: 0px;">____________</h1>
+		<h1>Ваши баллы:</h1><h2><span class="bal">0</span></h2>
 	</div>
 	<div class="bx1"></div>
 	<div class="bx2"></div>
@@ -68,17 +70,24 @@
 	</div>
 </div>
 <script type="text/javascript">
+	let x = 0
 	document.querySelector (".bx1").onclick = function(){
+		x = x + 1
 		document.querySelector (".bx1").style.display = "none"
 		document.querySelector (".txt3").style.textDecoration = "line-through"
+		document.querySelector (".bal").innerHTML = x
 	}
 	document.querySelector (".bx2").onclick = function(){
+		x = x + 1
 		document.querySelector (".bx2").style.display = "none"
 		document.querySelector (".txt1").style.textDecoration = "line-through"
+		document.querySelector (".bal").innerHTML = x
 	}
 	document.querySelector (".bx3").onclick = function(){
+		x = x + 1
 		document.querySelector (".bx3").style.display = "none"
 		document.querySelector (".txt2").style.textDecoration = "line-through"
+		document.querySelector (".bal").innerHTML = x
 	}
 
 </script>
